@@ -10,7 +10,6 @@ Constraints:
 - 1 <= word.length <= 15
 - board and word consists of only lowercase and uppercase english letters.
 
-
 1. First solution: assuming that the word only exists horizontally, and assuming a specific word and board -> sessionExercise.py
 
 2. Second solution: modify the function created in the first solution so that it can accept both variables: word vs board -> secondPart.py
