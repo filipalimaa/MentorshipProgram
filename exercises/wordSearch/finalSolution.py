@@ -27,8 +27,8 @@ def exist(word, board):
     return False
 
 # Use Example:
-word = "FCE"
+"""word = "FCE"
 board = [["A","B","C","E"],
          ["S","F","C","K"],
          ["A","D","E","E"]]
-print(exist(word, board))
+print(exist(word, board))"""
