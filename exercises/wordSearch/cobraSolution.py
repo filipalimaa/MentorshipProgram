@@ -37,7 +37,7 @@ def exist(board, word):
         ):
             return False 
         
-        visited.add((row, col)) 
+        visited.add(row, col) 
 
         if (
             search(row + 1, col, index + 1, visited) or 
@@ -47,7 +47,7 @@ def exist(board, word):
         ):
             return True 
 
-        visited.remove((row, col))
+        visited.remove(row, col)
         return False
 
     for row in range(len(board)): 
