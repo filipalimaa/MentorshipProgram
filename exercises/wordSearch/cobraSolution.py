@@ -1,34 +1,34 @@
 def exist(board, word):
 
-    def search(row, col, index, visited): # row e col é a posição atual, index é a posição da letra atual
-        if index == len(word): # Verificar se já foram percorridas todas as letras da word
+    def search(row, col, index, visited): 
+        if index == len(word):
             return True
 
         if (
-            row < 0 or row >= len(board) or # As primeiras condições para validar se a posição (row, col) está fora da matriz
+            row < 0 or row >= len(board) or 
             col < 0 or col >= len(board[0]) or
-            (row, col) in visited or # Verificar se a posição já foi "analisada"
-            board[row][col] != word[index] # Verificar se a letra da matriz é diferente que a letra na posição atual da word
+            (row, col) in visited or 
+            board[row][col] != word[index]
         ):
-            return False # Se alguma destas condições se verificar, devolve logo False
+            return False 
         
-        visited.add((row, col))  # Se nenhuma das condições de verificar fazemos um append a um array com letras já "verificadas"
+        visited.add((row, col)) 
 
         if (
-            search(row + 1, col, index + 1, visited) or # Verificar na mesma coluna, na linha em baixo
-            search(row - 1, col, index + 1, visited) or # Verificar na mesma coluna, na linha em cima
-            search(row, col + 1, index + 1, visited) or # Verificar na mesma linha, coluna da direita
-            search(row, col - 1, index + 1, visited) # Verificar na mesma linha, coluna da esquerda
+            search(row + 1, col, index + 1, visited) or 
+            search(row - 1, col, index + 1, visited) or 
+            search(row, col + 1, index + 1, visited) or 
+            search(row, col - 1, index + 1, visited) 
         ):
-            return True # Se encontrar cada letra da word (index + 1), devolve true
+            return True 
 
-        visited.remove((row, col)) # Se a palavra não foi encontrada para a posição (row, col), tira-se do array, para voltar outra vez a ser analisada na próxima try
+        visited.remove((row, col))
         return False
 
-    for row in range(len(board)): # Para cada linha da matriz
-        for col in range(len(board[0])): # Para cada coluna da matriz
-            if board[row][col] == word[0]: # Tentamos encontrar a primeira letra da ord
-                if search(row, col, 0, set()): # Encontrando a primeira letra, usamos a função search p/ encontrar o resto nas outras direções
+    for row in range(len(board)): 
+        for col in range(len(board[0])): 
+            if board[row][col] == word[0]: 
+                if search(row, col, 0, set()): 
                     return True
 
     return False
