@@ -1,3 +1,28 @@
+def search(row, col, index, visited): 
+    if index == len(word):
+        return True
+
+    if (
+        row < 0 or row >= len(board) or 
+        col < 0 or col >= len(board[0]) or
+        (row, col) in visited or 
+        board[row][col] != word[index]
+    ):
+        return False 
+        
+    visited.add((row, col)) 
+
+    if (
+        search(row + 1, col, index + 1, visited) or 
+        search(row - 1, col, index + 1, visited) or 
+        search(row, col + 1, index + 1, visited) or 
+        search(row, col - 1, index + 1, visited) 
+    ):
+        return True 
+
+    visited.remove((row, col))
+    return False
+
 def exist(board, word):
 
     def search(row, col, index, visited): 
