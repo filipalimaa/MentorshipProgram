@@ -88,4 +88,13 @@ def test_example2():
     gaveta = ["7", "3","4", "4", "4", "4","5","5","3","4", "7", "4", "2","3","3","5", "4", "4","2","7","7"]
     
     assert countingCards(baralho, gaveta) == 0
+<<<<<<< HEAD
 >>>>>>> a82afc4 (test: create first false test)
+=======
+
+def test_example3():
+    baralho = ["2", "3", "4", "5", "6", "7"]
+    gaveta = []
+    
+    assert countingCards(baralho, gaveta) == 0
+>>>>>>> 54018f5 (test: create false test with empty array)
