@@ -1,0 +1,7 @@
+from cardDeckSolution import countingCards
+
+def test_example1():
+    baralho = ["2", "3", "4", "5", "6", "7"]
+    gaveta = ["6","7", "3","4", "4", "4", "4","5","5","3", "4", "7", "4","6", "6", "2","3","3","5", "4", "4","2","7","7"]
+    
+    assert countingCards(baralho, gaveta) == 2
