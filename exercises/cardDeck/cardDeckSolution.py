@@ -7,6 +7,7 @@ def countingCards(baralho, gaveta):
         else:
             countCardsDrawer[carta] = 1
     
+    # count the cards in the deck, check that each one is in the drawer and then count as few decks as possible.
     countCardsDeck = []
     for carta in baralho:
         if carta not in countCardsDrawer:
