@@ -42,7 +42,7 @@ def exist(board, word):
         ):
             return False
 
-        visited.add(row, col)
+        visited.add((row, col))
 
         if (
             search(row + 1, col, index + 1, visited)
