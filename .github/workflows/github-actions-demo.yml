@@ -22,10 +22,10 @@ jobs:
         run: pytest
       
       - name: Check quality with pylint
-        run: pylint
+        run: pylint **/*.py
         
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-          
+
       - run: echo "🍏 This job's status is ${{ job.status }}."
