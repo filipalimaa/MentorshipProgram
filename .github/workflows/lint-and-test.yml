@@ -1,5 +1,5 @@
-name: Mentorship Programm GitHub Actions
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Lint and Test Pipeline
+run-name: ${{ github.actor }} is running linting and tests 🚀
 on: [push]
 jobs:
   Explore-GitHub-Actions:
