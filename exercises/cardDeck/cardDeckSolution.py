@@ -17,3 +17,16 @@ def countingCards(deck, drawer):
             min_decks = count
     
     return min(min_decks)
+
+## Alternative solution
+def counting_Cards(deck, drawer):
+    count_Cards_Drawer = {card: 0 for card in deck}
+    
+    for card in drawer:
+        if card in count_Cards_Drawer:
+            count_Cards_Drawer[card] += 1
+            
+    if 0 in count_Cards_Drawer.values():
+        return 0
+    
+    return min(count_Cards_Drawer.values())
