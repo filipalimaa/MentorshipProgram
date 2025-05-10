@@ -16,7 +16,7 @@ def countingCards(deck, drawer):
         if min_decks is None or count < min_decks:
             min_decks = count
     
-    return min(min_decks)
+    return min_decks
 
 ## Alternative solution
 def counting_Cards(deck, drawer):
