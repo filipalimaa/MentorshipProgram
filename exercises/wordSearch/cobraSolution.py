@@ -40,9 +40,15 @@ def exist(board, word):
             or (row, col) in visited
             or board[row][col] != word[index]
         ):
+<<<<<<< HEAD
             return False
 
         visited.add((row, col))
+=======
+            return False 
+        
+        visited.add((row, col)) 
+>>>>>>> 56429bf (fix: fix the error 'return min(min_decks)' - its an integer not array)
 
         if (
             search(row + 1, col, index + 1, visited)

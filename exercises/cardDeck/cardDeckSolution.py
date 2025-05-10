@@ -64,6 +64,7 @@ def countingCards(deck, drawer):
             min_decks = count
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     return min(countCardsDeck)
 >>>>>>> a5b7589 (feat: count the number of possible decks)
 =======
@@ -71,6 +72,9 @@ def countingCards(deck, drawer):
 <<<<<<< HEAD
 >>>>>>> 5df6c2c (refactor: optimize countingCards to avoid unnecessary list and improve performance)
 =======
+=======
+    return min_decks
+>>>>>>> 56429bf (fix: fix the error 'return min(min_decks)' - its an integer not array)
 
 ## Alternative solution
 def counting_Cards(deck, drawer):
