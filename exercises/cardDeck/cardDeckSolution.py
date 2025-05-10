@@ -1,17 +1,17 @@
-def countingCards(baralho, gaveta):
+def countingCards(deck, drawer):
     # Count the cards in the drawer
     countCardsDrawer = {}
-    for carta in gaveta:
-        if carta in countCardsDrawer:
-            countCardsDrawer[carta] += 1
+    for card in drawer:
+        if card in countCardsDrawer:
+            countCardsDrawer[card] += 1
         else:
-            countCardsDrawer[carta] = 1
+            countCardsDrawer[card] = 1
     
     # count the cards in the deck, check that each one is in the drawer and then count as few decks as possible.
     countCardsDeck = []
-    for carta in baralho:
-        if carta not in countCardsDrawer:
+    for card in deck:
+        if card not in countCardsDrawer:
             return 0
-        countCardsDeck.append(countCardsDrawer.get(carta, 0))
+        countCardsDeck.append(countCardsDrawer.get(card, 0))
     
     return min(countCardsDeck)
