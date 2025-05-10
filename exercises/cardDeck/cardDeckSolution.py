@@ -68,4 +68,20 @@ def countingCards(deck, drawer):
 >>>>>>> a5b7589 (feat: count the number of possible decks)
 =======
     return min(min_decks)
+<<<<<<< HEAD
 >>>>>>> 5df6c2c (refactor: optimize countingCards to avoid unnecessary list and improve performance)
+=======
+
+## Alternative solution
+def counting_Cards(deck, drawer):
+    count_Cards_Drawer = {card: 0 for card in deck}
+    
+    for card in drawer:
+        if card in count_Cards_Drawer:
+            count_Cards_Drawer[card] += 1
+            
+    if 0 in count_Cards_Drawer.values():
+        return 0
+    
+    return min(count_Cards_Drawer.values())
+>>>>>>> 41725d9 (refactor: create an alternative solution by initializing the dictionary with all the keys set to zero)
