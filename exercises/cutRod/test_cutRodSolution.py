@@ -5,3 +5,6 @@ def test_example1():
     
 def test_example2():
     assert cutRod([3, 5, 8, 9, 10, 17, 17, 20]) == 24
+    
+def test_zero():
+    assert cutRod([]) == 0
