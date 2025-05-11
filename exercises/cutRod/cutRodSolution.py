@@ -6,7 +6,7 @@ def rod(price, remain):
     if remain == 0:
         return 0
     
-    max_value = None
+    max_value = float('-inf')
     
     for i in range(1, remain + 1):
         value = price[i -1] + rod(price, remain - i)
