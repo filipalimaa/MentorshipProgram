@@ -11,3 +11,6 @@ def test_zero():
     
 def test_minimum():
     assert cutRod([1]) == 1
+
+def test_repetitive_values():
+    assert cutRod([1, 1, 1, 1, 1, 1, 1, 1]) == 8
