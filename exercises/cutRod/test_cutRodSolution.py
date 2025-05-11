@@ -8,3 +8,6 @@ def test_example2():
     
 def test_zero():
     assert cutRod([]) == 0
+    
+def test_minimum():
+    assert cutRod([1]) == 1
