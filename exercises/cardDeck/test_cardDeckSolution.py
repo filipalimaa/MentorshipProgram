@@ -70,3 +70,4 @@ def test_example3():
     gaveta = []
 
     assert countingCards(baralho, gaveta) == 0
+    assert counting_Cards(baralho, gaveta) == 0
