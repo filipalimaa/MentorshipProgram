@@ -1,67 +1,71 @@
-def search(row, col, index, visited): 
+def search(row, col, index, visited):
     if index == len(word):
         return True
 
     if (
-        row < 0 or row >= len(board) or 
-        col < 0 or col >= len(board[0]) or
-        (row, col) in visited or 
-        board[row][col] != word[index]
+        row < 0
+        or row >= len(board)
+        or col < 0
+        or col >= len(board[0])
+        or (row, col) in visited
+        or board[row][col] != word[index]
     ):
-        return False 
-        
-    visited.add((row, col)) 
+        return False
+
+    visited.add((row, col))
 
     if (
-        search(row + 1, col, index + 1, visited) or 
-        search(row - 1, col, index + 1, visited) or 
-        search(row, col + 1, index + 1, visited) or 
-        search(row, col - 1, index + 1, visited) 
+        search(row + 1, col, index + 1, visited)
+        or search(row - 1, col, index + 1, visited)
+        or search(row, col + 1, index + 1, visited)
+        or search(row, col - 1, index + 1, visited)
     ):
-        return True 
+        return True
 
     visited.remove((row, col))
     return False
 
+
 def exist(board, word):
 
-    def search(row, col, index, visited): 
+    def search(row, col, index, visited):
         if index == len(word):
             return True
 
         if (
-            row < 0 or row >= len(board) or 
-            col < 0 or col >= len(board[0]) or
-            (row, col) in visited or 
-            board[row][col] != word[index]
+            row < 0
+            or row >= len(board)
+            or col < 0
+            or col >= len(board[0])
+            or (row, col) in visited
+            or board[row][col] != word[index]
         ):
-            return False 
-        
-        visited.add((row, col)) 
+            return False
+
+        visited.add((row, col))
 
         if (
-            search(row + 1, col, index + 1, visited) or 
-            search(row - 1, col, index + 1, visited) or 
-            search(row, col + 1, index + 1, visited) or 
-            search(row, col - 1, index + 1, visited) 
+            search(row + 1, col, index + 1, visited)
+            or search(row - 1, col, index + 1, visited)
+            or search(row, col + 1, index + 1, visited)
+            or search(row, col - 1, index + 1, visited)
         ):
-            return True 
+            return True
 
         visited.remove((row, col))
         return False
 
-    for row in range(len(board)): 
-        for col in range(len(board[0])): 
-            if board[row][col] == word[0]: 
-                if search(row, col, 0, set()): 
+    for row in range(len(board)):
+        for col in range(len(board[0])):
+            if board[row][col] == word[0]:
+                if search(row, col, 0, set()):
                     return True
 
     return False
 
+
 word = "BCCE"
-board = [["A","B","C","E"],
-         ["S","F","C","K"],
-         ["A","D","E","E"]]
+board = [["A", "B", "C", "E"], ["S", "F", "C", "K"], ["A", "D", "E", "E"]]
 
 print(exist(board, word))
 
@@ -104,5 +108,3 @@ board = [["A","B","C","E"],
          ["A","D","E","E"]]
 
 print(exist(word, board))"""
-
-                        
