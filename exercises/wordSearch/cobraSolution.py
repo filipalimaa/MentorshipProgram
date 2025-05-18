@@ -40,9 +40,9 @@ def exist(board, word):
             or (row, col) in visited
             or board[row][col] != word[index]
         ):
-            return False
-
-        visited.add((row, col))
+            return False 
+        
+        visited.add((row, col)) 
 
         if (
             search(row + 1, col, index + 1, visited)
