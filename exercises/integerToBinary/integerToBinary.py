@@ -5,4 +5,4 @@ def integer_to_binary(number):
     if number == 1:
         return 1
     
-    return integer_to_binary(number // 2) + (number % 2)
+    return integer_to_binary(number // 2) * 10 + (number % 2)
