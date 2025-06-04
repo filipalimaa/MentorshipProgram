@@ -20,7 +20,8 @@ jobs:
           pip install pylint
 
       - name: Run pylint
-        run: pylint **/*.py --exit-zero
+        run: pylint **/*.py
+        continue-on-error: true
     
   Test:
     name: Run pytest
