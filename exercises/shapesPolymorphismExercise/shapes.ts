@@ -42,3 +42,24 @@ class square extends shape {
         return this.side * 4;
     }
 }
+
+class circle extends shape {
+    radius: number;
+
+    constructor(radius: number) {
+        super();
+        this.radius = radius;
+    }
+
+    get_area(): number {
+        return Math.PI * this.radius * this.radius;
+    }
+
+    get_perimeter(): number {
+        return 2 * Math.PI * this.radius;
+    }
+
+    get_radius(): number {
+        return this.radius;
+    }
+}
