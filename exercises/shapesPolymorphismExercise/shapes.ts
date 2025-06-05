@@ -1,9 +1,9 @@
-abstract class shape {
+abstract class my_shape {
     abstract get_area(): number;
     abstract get_perimeter(): number;
 }
 
-class triangle extends shape {
+class my_triangle extends my_shape {
     side_A: number;
     side_B: number;
     side_C: number;
@@ -26,7 +26,7 @@ class triangle extends shape {
     }
 }
 
-class square extends shape {
+class my_square extends my_shape {
     side: number;
 
     constructor(side: number) {
@@ -43,7 +43,7 @@ class square extends shape {
     }
 }
 
-class circle extends shape {
+class my_circle extends my_shape {
     radius: number;
 
     constructor(radius: number) {
@@ -64,13 +64,13 @@ class circle extends shape {
     }
 }
 
-const tri = new triangle(2, 4, 5, 2);
-const sqr = new square(4);
-const crc = new circle(3);
+const triangle_ = new my_triangle(2, 4, 5, 2);
+const square_ = new my_square(4);
+const circle_ = new my_circle(3);
 
-const shapes: shape[] = [tri, sqr, crc];
+const shapes_: my_shape[] = [tri, sqr, crc];
 
-for (const _shape of shapes) {
+for (const _shape of shapes_) {
     console.log("Area:", _shape.get_area());
     console.log("Perimeter:", _shape.get_perimeter());
 
