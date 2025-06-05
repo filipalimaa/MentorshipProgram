@@ -63,3 +63,18 @@ class circle extends shape {
         return this.radius;
     }
 }
+
+const tri = new triangle(2, 4, 5, 2);
+const sqr = new square(4);
+const crc = new circle(3);
+
+const shapes: shape[] = [tri, sqr, crc];
+
+for (const _shape of shapes) {
+    console.log("Area:", _shape.get_area());
+    console.log("Perimeter:", _shape.get_perimeter());
+
+    if (_shape instanceof circle) {
+        console.log("Raio:", _shape.get_radius());
+    }
+}
