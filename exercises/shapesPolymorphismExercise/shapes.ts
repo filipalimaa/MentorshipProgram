@@ -25,3 +25,20 @@ class triangle extends shape {
         return (this.side_A + this.side_B + this.side_C);
     }
 }
+
+class square extends shape {
+    side: number;
+
+    constructor(side: number) {
+        super();
+        this.side = side;
+    }
+
+    get_area(): number {
+        return this.side * this.side;
+    }
+
+    get_perimeter(): number {
+        return this.side * 4;
+    }
+}
