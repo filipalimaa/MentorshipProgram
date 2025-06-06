@@ -57,3 +57,25 @@ class Circle extends Shape {
         return radius;
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        Shape[] shapes = {
+            new Triangle(3, 4, 5, 2),
+            new Square(4),
+            new Circle(3)
+        };
+
+        for (Shape shape: shapes) {
+            System.out.println("Área: " + shape.getArea());
+            System.out.println("Perímetro: " + shape.getPerimeter());
+
+            if (shape instanceof Circle) {
+                Circle c = (Circle) shape;
+                System.out.println("Raio: " + c.getRadius());
+            }
+
+            System.out.println("-----------")
+        }
+    }
+}
