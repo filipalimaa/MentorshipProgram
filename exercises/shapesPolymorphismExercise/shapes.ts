@@ -68,13 +68,13 @@ const triangle_ = new my_triangle(2, 4, 5, 2);
 const square_ = new my_square(4);
 const circle_ = new my_circle(3);
 
-const shapes_: my_shape[] = [tri, sqr, crc];
+const shapes_: my_shape[] = [triangle_, square_, circle_];
 
 for (const _shape of shapes_) {
     console.log("Area:", _shape.get_area());
     console.log("Perimeter:", _shape.get_perimeter());
 
-    if (_shape instanceof circle) {
+    if (_shape instanceof my_circle) {
         console.log("Raio:", _shape.get_radius());
     }
 }
