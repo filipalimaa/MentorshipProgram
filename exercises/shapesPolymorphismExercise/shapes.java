@@ -21,3 +21,19 @@ class Triangle extends Shape {
         return sideA + sideB + sideC;
     }
 }
+
+class Square extends Shape {
+    double side;
+
+    Square(double side) {
+        this.side = side;
+    }
+
+    double getArea() {
+        return side * side;
+    }
+
+    double getPerimeter() {
+        return 4 * side;
+    }
+}
