@@ -37,3 +37,23 @@ class Square extends Shape {
         return 4 * side;
     }
 }
+
+class Circle extends Shape {
+    double radius;
+
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
+    double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    double getPerimeter() {
+        return 2 * Math.PI * radius; 
+    }
+
+    double getRadius() {
+        return radius;
+    }
+}
