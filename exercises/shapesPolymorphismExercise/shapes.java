@@ -58,7 +58,7 @@ class Circle extends Shape {
     }
 }
 
-public class Main {
+public class shapes {
     public static void main(String[] args) {
         Shape[] shapes = {
             new Triangle(3, 4, 5, 2),
@@ -75,7 +75,7 @@ public class Main {
                 System.out.println("Raio: " + c.getRadius());
             }
 
-            System.out.println("-----------")
+            System.out.println("-----------");
         }
     }
 }
