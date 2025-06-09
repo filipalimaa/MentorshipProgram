@@ -24,3 +24,18 @@ def recursive_string(node):
     if node is None:
         return ""
     return node.value + recursive_string(node.next)
+
+def helper(n, head=None):
+    
+    if n == 0:
+        return head
+    head = helper(n // 2, head) 
+    head = insert(head, str(n % 2))
+    return head
+
+#Function to convert integer to binary
+def integer_to_binary(n):
+
+    if n == 0:
+        return Node("0")
+    return helper(n)
