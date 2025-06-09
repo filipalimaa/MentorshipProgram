@@ -39,3 +39,6 @@ def integer_to_binary(n):
     if n == 0:
         return Node("0")
     return helper(n)
+
+head = integer_to_binary(6)
+print(recursive_string(head))
