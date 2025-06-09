@@ -18,3 +18,9 @@ def insert(head, value):
         
     current.next = new_node
     return head
+
+#Recursive function to generate a string
+def recursive_string(node):
+    if node is None:
+        return ""
+    return node.value + recursive_string(node.next)
