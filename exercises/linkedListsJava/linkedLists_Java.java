@@ -33,4 +33,9 @@ class LinkedList {
         System.out.print(node.value);  // Imprime sem usar +
         printRecursive(node.next);
     }
+
+    void print() {
+        printRecursive(head);
+        System.out.println(); // Nova linha no fim
+    }
 }
