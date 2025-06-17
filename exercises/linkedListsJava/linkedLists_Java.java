@@ -39,3 +39,16 @@ class LinkedList {
         System.out.println(); // Nova linha no fim
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        LinkedList binaryList = new LinkedList();
+
+        binaryList.insertAtEnd(1);
+        binaryList.insertAtEnd(0);
+        binaryList.insertAtEnd(1);
+        binaryList.insertAtEnd(1);
+
+        binaryList.print();
+    }
+}
