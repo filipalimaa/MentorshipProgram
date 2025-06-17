@@ -20,5 +20,17 @@ public class BubbleSort {
             System.out.print(num + " ");
         }
         System.out.println();
-        
+    }
+    
+        public static void main(String[] args) {
+        int[] numeros = {5, 3, 4, 1};
+
+        System.out.println("Antes da ordenação:");
+        printArray(numeros);
+
+        bubbleSort(numeros);
+
+        System.out.println("Depois da ordenação:");
+        printArray(numeros);
+    }
 }
