@@ -1,6 +1,6 @@
 class Node {
     int value;
-    Node text;
+    Node next;
 
     Node(int value) {
         this.value = value;
