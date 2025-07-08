@@ -41,5 +41,13 @@ public class rottenOranges {
                 }
             }
         }
+
+        System.out.println("Final result: ");
+        for ( int i = 0; i < lines; i++ ) {
+            for ( int j = 0; j < columns; j++ ) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
