@@ -50,4 +50,25 @@ public class rottenOranges {
             System.out.println();
         }
     }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter number of rows and columns of rotten:");
+        int rows = sc.nextInt();
+        System.out.println("Enter number of columns of rotten:");
+        int columns = sc.nextInt();
+
+        int[][] matrix = new int[rows][columns];
+
+        System.out.println("Enter rotten matrix (0 = empty, 1 = good orange, 2 = rotten orange):");
+        for ( int i = 0; i < rows; i++ ) {
+            for ( int j = 0; j < columns; j++ ) {
+                matrix[i][j] = sc.nextInt();
+            }
+        }
+
+        rotten(matrix);
+        sc.close();
+    }
 }
