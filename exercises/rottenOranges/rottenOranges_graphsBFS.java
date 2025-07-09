@@ -1,6 +1,8 @@
+package rottenOranges;
+
 import java.util.*;
 
-public class rottenOranges {
+public class rottenOranges_graphsBFS {
 
     static class position {
         int line, column;
