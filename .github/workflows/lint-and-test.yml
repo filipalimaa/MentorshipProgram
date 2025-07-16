@@ -19,8 +19,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install pylint
 
+      - name: Check for Python files
+        id: check_py
+        run: |
+          if find . -name "*.py" | grep -q .; then
+            echo "has_py=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_py=false" >> &GITHUB_OUTPUT
+          fi
+
       - name: Run pylint
-        run: pylint **/*.py
+        if: steps.check_py.outputs.has_py == 'true'
+        run: | 
+          pylint $(find . -name "*.py")
         continue-on-error: true
     
   Test:
@@ -40,5 +51,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
       
+      - name: Check for Python test files
+        id: check_pytests
+        run: |
+          if find . -name "test_*.py" | grep -q .; then
+            echo "has_pytests=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_pytests=false" >> $GITHUB_OUTPUT
+          fi
+      
       - name: Run tests with pytest
+        if: steps-check_pytests.outputs.has_pytests == 'true'
         run: pytest
