@@ -1,3 +1,4 @@
+package orangeRottingPropagation;
 import java.util.*;
 
 public class Main {
@@ -7,7 +8,7 @@ public class Main {
         OrangeInputs inputReader = new OrangeInputs();
         int[][] matrix = inputReader.readInput();
 
-        OrangeROttingSolver solver = new OrangeRottingSolver();
+        OrangeRottingSolver solver = new OrangeRottingSolver();
         int time = solver.timeToRot(matrix);
 
         System.out.println("Time it takes for all the oranges to rot:" + time);

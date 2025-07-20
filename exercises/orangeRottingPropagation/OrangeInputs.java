@@ -1,3 +1,4 @@
+package orangeRottingPropagation;
 import java.util.Scanner;
 
 public class OrangeInputs {
