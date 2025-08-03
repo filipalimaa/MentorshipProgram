@@ -30,4 +30,4 @@ Inside the resources/ folder will be articles, links and materials recommended b
 
 Projects
 
-Practical projects developed during the mentoring will be in projects/.
+Practical projects developed during the mentoring will be in projects/.# adventOfCode2022
